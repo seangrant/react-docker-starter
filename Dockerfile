@@ -1,19 +1,10 @@
 FROM node:4.2.2
 MAINTAINER sgrant
 
-# Prepare app directory
-RUN mkdir -p /usr/src/app
-ADD . /usr/src/app
+COPY . /src
 
-# Install dependencies
-WORKDIR /usr/src/app
-RUN npm install
+RUN cd /src; npm install
 
-# Build the app
-RUN npm build
+EXPOSE 8080
 
-# Expose the app port
-EXPOSE 8000
-
-# Start the app
-CMD npm start
+CMD cd /src && node ./server.js
