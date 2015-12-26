@@ -1,5 +1,12 @@
+machine:
+  node:
+    version: 4.2.2
+
 deployment:
  dockerhub:
    branch: master
    commands:
      - $DOCKER_HUB_TRIGGER
+test:
+  override:
+    - mocha --require babel-core/register

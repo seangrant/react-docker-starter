@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 export default class Hello extends React.Component {
+
   render() {
-    return <h1>Hello world</h1>;
+    const { value, onIncrement, onDecrement } = this.props;
+    return (
+      <div>
+        <button onClick={ onDecrement }>-</button>
+        <h1>{ value }</h1>
+        <button onClick={ onIncrement }>+</button>
+      </div>
+    )
+
   }
 }
