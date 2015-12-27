@@ -35,4 +35,11 @@ describe('counter:', () => {
       return expect(state).to.equal(0);
     });
   })
+
+  describe('when adding an item to the cart', () => {
+    state = 
+    it('should add the item', () => {
+
+    })
+  })
 });

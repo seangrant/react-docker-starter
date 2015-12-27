@@ -1,7 +1,9 @@
 {
-  "optional": [
-    "es7.classProperties",
-    "es7.objectRestSpread",
-    "es7.decorators"
+  "plugins": [
+    "syntax-object-rest-spread",
+    "transform-object-rest-spread"
+  ],
+  "presets": [
+    "es2015"
   ]
 }
