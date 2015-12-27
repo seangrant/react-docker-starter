@@ -14,7 +14,15 @@ var config = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      loader: 'babel'
+      loader: 'babel',
+      exclude: [
+          path.resolve(__dirname, "node_modules"),
+      ],
+      // Options to configure babel with
+      query: {
+        plugins: ['transform-runtime'],
+        presets: ['es2015', 'stage-0', 'react'],
+      }
     },{
       test: /\.html?$/,
       loader: 'file'
