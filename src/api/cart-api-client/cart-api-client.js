@@ -1,9 +1,10 @@
 import Promise from 'bluebird';
 import mockcartData from './mockcartData';
 
-const products = () => {
+const get = () => {
   return Promise.resolve(mockcartData);
 }
+
 export default {
-  products
+  get
 }

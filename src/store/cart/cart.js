@@ -10,7 +10,7 @@ export default (state = [], action) => {
           ...state,
           {
             id: payload.id,
-
+            quantity: payload.quantity
           }
         ];
     default:

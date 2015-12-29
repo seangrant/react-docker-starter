@@ -4,7 +4,7 @@ const expect = chai.expect;
 import chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 
-import counter, { store } from '../src/store/cart';
+import counter, { store } from '../src/store/cart/cart';
 import { addCartItem } from '../src/store/cart/cart.actionCreator';
 
 describe('cart:', () => {

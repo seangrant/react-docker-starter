@@ -20,8 +20,3 @@ export default (state = initialState, action) => {
       return state;
   }
 }
-
-export const getProducts = () => dispatch => {
-  dispatch({type: GET_PRODUCTS_BEGIN});
-  
-}

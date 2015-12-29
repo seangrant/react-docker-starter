@@ -34,7 +34,7 @@ var config = {
       'theme.less': path.join(__dirname, 'src/theme/theme.less'),
       'store': path.join(__dirname, 'src/store')
     },
-    modulesDirectories: ['node_modules', 'wip_modules', 'components']
+    modulesDirectories: ['node_modules', 'components', 'api']
   }
 };
 

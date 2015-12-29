@@ -1,5 +1,4 @@
-export default const = {
-  [
+export default [
     {
       id: 1,
       description: "food 1",
@@ -34,4 +33,3 @@ export default const = {
       imageUrl: 'http://lorempixel.com/200/200/food/8'
     }
   ]
-}

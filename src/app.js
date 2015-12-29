@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import Counter from 'counter/counter';
 import store from 'store/createStore';
+import Cart from 'cart/cart';
 
 export default class App extends Component {
   render() {
-    const { value } = this.props;
     return (
       <Provider store={ store }>
-        <Counter/>
+        <div>
+          <Counter/>
+          <Cart/>
+        </div>
       </Provider>
     )
   }
