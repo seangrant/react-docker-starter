@@ -1,45 +1,40 @@
-var assert = require('assert');
-var chai = require('chai');
-var expect = chai.expect;
-var chaiAsPromised = require('chai-as-promised');
+import assert from 'assert';
+import chai from 'chai';
+const expect = chai.expect;
+import chaiAsPromised from 'chai-as-promised';
 chai.use(chaiAsPromised);
 
 import counter, { store } from '../src/store/cart';
+import { addCartItem } from '../src/store/cart/cart.actionCreator';
 
-describe('counter:', () => {
+describe('cart:', () => {
   let state;
 
   describe('when no action is specified', () => {
     before(() => {
-      state = counter(1, {});
+      state = counter([], {});
     })
     it('should return state', () => {
-      assert.equal(1, state);
-    });
-  })
-
-  describe('when increnting counter', () => {
-    before(() => {
-      state = counter(1, { type: 'INCREMENT'});
-    })
-    it('should increment state by 1', () => {
-      return expect(state).to.equal(2);
-    });
-  })
-
-  describe('when decrementing counter', () => {
-    before(() => {
-      state = counter(1, { type: 'DECREMENT'});
-    })
-    it('should decrement state by 1', () => {
-      return expect(state).to.equal(0);
+      assert.deepEqual([], state);
     });
   })
 
   describe('when adding an item to the cart', () => {
-    state = 
-    it('should add the item', () => {
+    const stateBefore = [];
+    const item = {
+        id: 1,
+        quantity: 1
+    };
+    const action = addCartItem(item);
 
+    let stateAfter;
+    const expectedStateAfter = [item];
+    before(() => {
+      stateAfter = counter(stateBefore, action);
     })
+    it('should add the item', () => {
+      expect(stateAfter).to.deep.equal(expectedStateAfter);
+    })
+
   })
 });

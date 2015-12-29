@@ -1,15 +1,5 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-import Hello from './component.jsx';
-import { store } from './store/cart';
-main();
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app';
 
-function main() {
-    ReactDOM.render(<Hello
-      value={ store.getState() }
-       onIncrement={ () => {store.dispatch({type: 'INCREMENT'})}}
-       onDecrement={ () => {store.dispatch({type: 'DECREMENT'})}}
-      />, document.getElementById('app'));
-}
-
-store.subscribe(main);
+ReactDOM.render(<App/>, document.getElementById('app'));
